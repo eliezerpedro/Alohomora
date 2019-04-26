@@ -12,6 +12,7 @@ import MapKit
 class ViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var HomeMapKit: MKMapView!
+    var estabelecimento:MKPointAnnotation = MKPointAnnotation()
 
     var locationManager = CLLocationManager()
     var userLocation = CLLocation()
@@ -20,21 +21,20 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // set initial location in Hackatruck
-        HomeMapKit.delegate = self
+        addAnnotation()
         let truck = CLLocation(latitude: -8.05605232, longitude: -34.95095883)
         centerMapOnLocation(location: truck)
         HomeMapKit.showsUserLocation = true
         setupLocationManager()
-        addAnnotation()
-        
+        HomeMapKit.delegate = self
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier == "estabelecimentoInfo" {
             let infoViewController = segue.destination as! infoViewController
+            infoViewController.nome = estabelecimento.title
         }
     }
-    
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?{
         
@@ -51,8 +51,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
         return annotationView
     }
-    
-   
+       
     func setupLocationManager(){
         //Esta variavel pega a localização mais proxima
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -75,14 +74,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     //Cria estrutura para uma anotação
     func addAnnotation(){
-        let estabelecimento:MKPointAnnotation = MKPointAnnotation()
         //Seta um pin no mapa
         estabelecimento.coordinate = CLLocationCoordinate2DMake(-8.05605232, -34.95095883)
         //Estabelece um nome para o local setado
-        estabelecimento.title = "Hackatruck UFPE"
+        estabelecimento.title = "Hackatruck Ufpe"
         HomeMapKit.addAnnotation(estabelecimento)
 
     }
+    
+    //func addGesture(press:UILongPressGestureRecognizer)
     
     //Define o zoom no mapa
     func centerMapOnLocation(location: CLLocation) {
@@ -92,8 +92,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
 
 }
-
-
 
 extension ViewController: MKMapViewDelegate{
     

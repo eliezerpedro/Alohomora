@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F5659E92272237600A15591 /* infoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5659E82272237600A15591 /* infoViewController.swift */; };
+		3F7475BD2273959D00C92F5C /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7475BC2273959D00C92F5C /* PopUpViewController.swift */; };
 		3F82CE4C2270DD0900074DB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F82CE4B2270DD0900074DB5 /* AppDelegate.swift */; };
 		3F82CE4E2270DD0900074DB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F82CE4D2270DD0900074DB5 /* ViewController.swift */; };
 		3F82CE512270DD0900074DB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F82CE4F2270DD0900074DB5 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		3F5659E82272237600A15591 /* infoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = infoViewController.swift; sourceTree = "<group>"; };
+		3F7475BC2273959D00C92F5C /* PopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		3F82CE482270DD0900074DB5 /* Alohomora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alohomora.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F82CE4B2270DD0900074DB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F82CE4D2270DD0900074DB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				3F82CE4B2270DD0900074DB5 /* AppDelegate.swift */,
 				3F82CE4D2270DD0900074DB5 /* ViewController.swift */,
 				3F82CE4F2270DD0900074DB5 /* Main.storyboard */,
+				3F7475BC2273959D00C92F5C /* PopUpViewController.swift */,
 				3F5659E82272237600A15591 /* infoViewController.swift */,
 				3F82CE522270DD0900074DB5 /* Assets.xcassets */,
 				3F82CE542270DD0900074DB5 /* LaunchScreen.storyboard */,
@@ -281,6 +284,7 @@
 				3F5659E92272237600A15591 /* infoViewController.swift in Sources */,
 				3F82CE4E2270DD0900074DB5 /* ViewController.swift in Sources */,
 				3F82CE4C2270DD0900074DB5 /* AppDelegate.swift in Sources */,
+				3F7475BD2273959D00C92F5C /* PopUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
