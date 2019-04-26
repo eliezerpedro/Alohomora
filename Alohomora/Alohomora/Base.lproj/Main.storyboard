@@ -35,10 +35,38 @@
                     </view>
                     <connections>
                         <outlet property="HomeMapKit" destination="esw-Hu-LXH" id="b7t-ir-vtD"/>
+                        <segue destination="Bld-oL-NJS" kind="show" identifier="estabelecimentoInfo" id="4W5-Yr-Hv7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="sTs-nW-AaK">
+            <objects>
+                <viewController id="Bld-oL-NJS" customClass="infoViewController" customModule="Alohomora" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="z77-5D-a7Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="uiy-Pi-m8O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aVA-Ba-NlV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Puu-ug-Q8y">
+                                <rect key="frame" x="0.0" y="225" width="375" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="577989065.226524">
+                                    <!--2019-04-26 16:31:05 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VAF-ib-aMa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="990" y="118"/>
         </scene>
     </scenes>
 </document>

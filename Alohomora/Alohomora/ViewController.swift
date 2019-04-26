@@ -15,17 +15,44 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
     var locationManager = CLLocationManager()
     var userLocation = CLLocation()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // set initial location in Hackatruck
+        HomeMapKit.delegate = self
         let truck = CLLocation(latitude: -8.05605232, longitude: -34.95095883)
         centerMapOnLocation(location: truck)
         HomeMapKit.showsUserLocation = true
         setupLocationManager()
         addAnnotation()
+        
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if segue.identifier == "estabelecimentoInfo" {
+            let infoViewController = segue.destination as! infoViewController
+        }
+    }
+    
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?{
+        
+        if annotation is MKUserLocation {
+            return nil
+        }
+        
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "myAnnotation") as? MKPinAnnotationView
+        
+        if annotationView == nil {
+            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "myAnnotation")
+        } else {
+            annotationView?.annotation = annotation
+        }
+        return annotationView
+    }
+    
+   
     func setupLocationManager(){
         //Esta variavel pega a localização mais proxima
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -54,6 +81,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         //Estabelece um nome para o local setado
         estabelecimento.title = "Hackatruck UFPE"
         HomeMapKit.addAnnotation(estabelecimento)
+
     }
     
     //Define o zoom no mapa
@@ -62,9 +90,19 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius, regionRadius)
         HomeMapKit.setRegion(coordinateRegion, animated: true)
     }
-    
-    
-
 
 }
+
+
+
+extension ViewController: MKMapViewDelegate{
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView){
+        performSegue(withIdentifier: "estabelecimentoInfo", sender: nil)
+        
+    }
+}
+
+
+
 
