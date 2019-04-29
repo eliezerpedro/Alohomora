@@ -18,7 +18,25 @@ class infoViewController: UIViewController {
     @IBOutlet weak var enderecoLabel: UILabel!
     @IBOutlet weak var telefoneLabel: UILabel!
     @IBOutlet weak var descricaoLabel: UILabel!
-    @IBOutlet weak var buttonConf: UIButton!
+ 
+    @IBAction func btnReserve(_ sender: Any) {
+        let confirmar = UIAlertController(title: "Confirma", message:"Você tem certeza da escolha?", preferredStyle: UIAlertControllerStyle.alert)
+        
+        let janela1 = UIAlertAction(title: "confirmar", style: UIAlertActionStyle.default)
+        {(UIAlertAction) in
+            
+            self.performSegue(withIdentifier: "btnReserve", sender: nil)
+            
+        }
+        
+        let retornar = UIAlertAction(title: "retornar", style: UIAlertActionStyle.default, handler: nil)
+        
+        
+        confirmar.addAction(janela1)
+        confirmar.addAction(retornar)
+        
+        self.present(confirmar, animated: true,completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
