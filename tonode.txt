@@ -1,4 +1,70 @@
+// https://www.filipeflop.com/blog/controle-monitoramento-iot-nodemcu-e-mqtt/
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 #include <Servo.h>
+#include <ESP8266WiFi.h>
+#include <PubSubClient.h>
+
+
+//atualize SSID e senha WiFi
+const char* ssid = "IBMHackatruckIoT";
+const char* password = "IOT2017IBM";
+
+
+//Atualize os valores de Org, device type, device id e token
+#define ORG "m5j83l"
+#define DEVICE_TYPE "padlock"
+#define DEVICE_ID "padlock00"
+#define TOKEN "12345678"
+
+
+//broker messagesight server
+char server[] = ORG ".messaging.internetofthings.ibmcloud.com";
+char topic[] = "iot-2/evt/status/fmt/json";
+char authMethod[] = "use-token-auth";
+char token[] = TOKEN;
+char clientId[] = "d:" ORG ":" DEVICE_TYPE ":" DEVICE_ID;
+
+
+// Prepara JSON para IOT Platform
+int length = 0;
+
+
+String payload = "{\"d\":{\"umidade\":\"" + umidadestr + "\"}}";
+
+
+length = payload.length();
+Serial.print(F("\nData length"));
+Serial.println(length);
+
+
+Serial.print("Sending payload: ");
+Serial.println(payload);
+
+
+if (client.publish(topic, (char*) payload.c_str())) {
+    Serial.println("Publish ok");
+    digitalWrite(LED_BUILTIN, LOW);
+    delay(500);
+    digitalWrite(LED_BUILTIN, HIGH);
+    delay(500);
+} 
+else {
+    Serial.println("Publish failed");
+    Serial.println(client.state());
+}
+
 
 Servo servo;
 
@@ -22,3 +88,4 @@ void loop() {
     delay(100);
 
 }
+*/
