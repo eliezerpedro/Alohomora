@@ -27,12 +27,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         HomeMapKit.showsUserLocation = true
         setupLocationManager()
         HomeMapKit.delegate = self
-        for location in locations {
-            let annotation = MKPointAnnotation()
-            annotation.title = location.title
-            annotation.coordinate = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
-            HomeMapKit.addAnnotation(annotation)
-        }  
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
@@ -41,14 +35,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             infoViewController.nome = estabelecimento.title
         }
     }
-    struct Location{
-        let title: String
-        let latitude: Double
-        let longitude: Double
-    }
-    let locations = [Location(title: "CTG UFPE",latitude: -8.0556, longitude: -34.9513)]
-    
-    
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?{
         

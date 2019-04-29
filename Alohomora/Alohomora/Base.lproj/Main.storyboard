@@ -54,7 +54,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8g9-bW-qEU">
-                                <rect key="frame" x="9" y="59" width="178" height="21"/>
+                                <rect key="frame" x="9" y="59" width="318" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -68,8 +68,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRu-VI-vc1">
-                                <rect key="frame" x="245" y="586" width="82" height="30"/>
+                                <rect key="frame" x="271" y="610" width="88" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.70864746784283994" green="0.73269382885430834" blue="0.76598931347150256" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Reserva">
                                     <color key="titleColor" red="0.057096016839378261" green="0.057096016839378261" blue="0.057096016839378261" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -82,14 +83,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Na-d3-Tla">
-                                <rect key="frame" x="9" y="139" width="178" height="21"/>
+                                <rect key="frame" x="9" y="139" width="318" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <color key="highlightedColor" red="0.021514734460000001" green="0.021514734460000001" blue="0.021514734460000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dL1-gS-iqh">
-                                <rect key="frame" x="9" y="222" width="178" height="21"/>
+                                <rect key="frame" x="9" y="222" width="318" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -109,12 +110,12 @@
                                 <color key="textColor" red="0.62212597150000004" green="0.62212597150000004" blue="0.62212597150000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ege-Ey-sWR">
-                                <rect key="frame" x="9" y="382" width="248" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hackatruckk" translatesAutoresizingMaskIntoConstraints="NO" id="Ege-Ey-sWR">
+                                <rect key="frame" x="9" y="382" width="350" height="165"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Geh-Yf-TNw">
-                                <rect key="frame" x="9" y="292" width="178" height="21"/>
+                                <rect key="frame" x="9" y="282" width="350" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -125,7 +126,11 @@
                     </view>
                     <connections>
                         <outlet property="buttonConf" destination="wRu-VI-vc1" id="aur-FJ-03a"/>
+                        <outlet property="descricaoLabel" destination="1Na-d3-Tla" id="U8Y-Na-PcL"/>
+                        <outlet property="enderecoLabel" destination="Geh-Yf-TNw" id="qrY-LP-AIK"/>
+                        <outlet property="imageView" destination="Ege-Ey-sWR" id="XE2-fl-1Xt"/>
                         <outlet property="nomeLabel" destination="8g9-bW-qEU" id="W3f-KG-1gv"/>
+                        <outlet property="telefoneLabel" destination="dL1-gS-iqh" id="coe-ij-AI0"/>
                         <segue destination="ucy-YS-e2s" kind="show" identifier="PopUp" customClass="UIStoryBoardSegue" id="3MD-QA-Hbp"/>
                     </connections>
                 </viewController>
@@ -168,4 +173,7 @@
             <point key="canvasLocation" x="1680.8" y="116.49175412293854"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hackatruckk" width="750" height="500"/>
+    </resources>
 </document>
