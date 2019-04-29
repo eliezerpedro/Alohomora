@@ -10,10 +10,9 @@ import UIKit
 import MapKit
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
-
+    
     @IBOutlet weak var HomeMapKit: MKMapView!
     var estabelecimento:MKPointAnnotation = MKPointAnnotation()
-
     var locationManager = CLLocationManager()
     var userLocation = CLLocation()
     
@@ -22,11 +21,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         // set initial location in Hackatruck
         addAnnotation()
+        
         let truck = CLLocation(latitude: -8.05605232, longitude: -34.95095883)
         centerMapOnLocation(location: truck)
         HomeMapKit.showsUserLocation = true
         setupLocationManager()
         HomeMapKit.delegate = self
+        for location in locations {
+            let annotation = MKPointAnnotation()
+            annotation.title = location.title
+            annotation.coordinate = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
+            HomeMapKit.addAnnotation(annotation)
+        }  
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
@@ -35,6 +41,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             infoViewController.nome = estabelecimento.title
         }
     }
+    struct Location{
+        let title: String
+        let latitude: Double
+        let longitude: Double
+    }
+    let locations = [Location(title: "CTG UFPE",latitude: -8.0556, longitude: -34.9513)]
+    
+    
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?{
         
@@ -77,7 +91,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         //Seta um pin no mapa
         estabelecimento.coordinate = CLLocationCoordinate2DMake(-8.05605232, -34.95095883)
         //Estabelece um nome para o local setado
-        estabelecimento.title = "Hackatruck Ufpe"
+        estabelecimento.title = "Hackatruck UFPE"
         HomeMapKit.addAnnotation(estabelecimento)
 
     }
