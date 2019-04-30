@@ -191,6 +191,7 @@
                                 <connections>
                                     <action selector="btnReserve:" destination="Bld-oL-NJS" eventType="touchUpInside" id="8pR-tn-nyv"/>
                                     <action selector="buttonConfirmar:" destination="vQG-96-Ifb" eventType="touchUpInside" id="jwk-Tb-7uI"/>
+                                    <segue destination="ixz-4H-Naa" kind="presentation" identifier="popUp" id="LiE-mE-nCz"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FIM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhp-f3-fqv">
@@ -210,6 +211,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="61y-05-du6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2672.8000000000002" y="118.29085457271366"/>
+        </scene>
+        <!--Confirmation View Controller-->
+        <scene sceneID="fGk-x0-jH3">
+            <objects>
+                <viewController id="ixz-4H-Naa" customClass="ConfirmationViewController" customModule="Alohomora" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8Ra-sJ-Bds"/>
+                        <viewControllerLayoutGuide type="bottom" id="rfI-vt-L8g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HRz-yj-3jJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cv0-2L-YsG">
+                                <rect key="frame" x="56" y="196" width="262" height="210"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="confirmado xcode" translatesAutoresizingMaskIntoConstraints="NO" id="OW5-un-4Rs">
+                                        <rect key="frame" x="0.0" y="0.0" width="262" height="153"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QX7-61-00U">
+                                        <rect key="frame" x="8" y="172" width="106" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Sair"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6N-Dw-4De">
+                                        <rect key="frame" x="148" y="172" width="106" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Voltar ao Mapa"/>
+                                        <connections>
+                                            <action selector="buttonMapa:" destination="ixz-4H-Naa" eventType="touchUpInside" id="R75-om-Df5"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="voltarMapa" id="wSl-Yq-vU1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bNh-3I-yPZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3456.8000000000002" y="102.99850074962519"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eKC-0O-2qS">
@@ -231,6 +280,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="confirmado xcode" width="320" height="250"/>
         <image name="hackatruckk" width="750" height="500"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="wSl-Yq-vU1"/>
+    </inferredMetricsTieBreakers>
 </document>

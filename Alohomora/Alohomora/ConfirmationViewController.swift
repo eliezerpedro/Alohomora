@@ -10,12 +10,23 @@ import UIKit
 
 class ConfirmationViewController: UIViewController {
     
+    
+    
+    @IBAction func buttonMapa(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "voltarMapa", sender: nil)
+        
+    }
+    
+    
     @IBAction func buttonConfirmar(_ sender: Any) {
         
         let confirmar = UIAlertController(title: "Confirma", message:"Você tem certeza da escolha?", preferredStyle: UIAlertControllerStyle.alert)
         
         let janela1 = UIAlertAction(title: "confirmar", style: UIAlertActionStyle.default)
         {(UIAlertAction) in
+            
+            self.performSegue(withIdentifier: "popUp", sender: nil)
             
             let parameters = ["request":["user_id": "111113", "hour": "12:18", "date":"18/11/2019", "padlock":"04"]]
             
