@@ -20,6 +20,8 @@ class infoViewController: UIViewController {
     @IBOutlet weak var descricaoLabel: UILabel!
  
     @IBAction func btnReserve(_ sender: Any) {
+    
+    
         let confirmar = UIAlertController(title: "Confirma", message:"Você tem certeza da escolha?", preferredStyle: UIAlertControllerStyle.alert)
         
         let janela1 = UIAlertAction(title: "confirmar", style: UIAlertActionStyle.default)
@@ -37,6 +39,9 @@ class infoViewController: UIViewController {
         
         self.present(confirmar, animated: true,completion: nil)
     }
+
+
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

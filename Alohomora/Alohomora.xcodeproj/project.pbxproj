@@ -18,6 +18,7 @@
 		3F82CE6C2270DD0900074DB5 /* AlohomoraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F82CE6B2270DD0900074DB5 /* AlohomoraUITests.swift */; };
 		3F82CE7B2270E02A00074DB5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F82CE7A2270E02A00074DB5 /* CoreLocation.framework */; };
 		3F82CE7D2270E03000074DB5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F82CE7C2270E03000074DB5 /* MapKit.framework */; };
+		3FFA5CD52278AF1900336034 /* Estabelecimento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFA5CD42278AF1900336034 /* Estabelecimento.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		3F82CE6D2270DD0900074DB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F82CE7A2270E02A00074DB5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3F82CE7C2270E03000074DB5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3FFA5CD42278AF1900336034 /* Estabelecimento.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Estabelecimento.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				3F82CE4B2270DD0900074DB5 /* AppDelegate.swift */,
 				3F82CE4D2270DD0900074DB5 /* ViewController.swift */,
 				3F82CE4F2270DD0900074DB5 /* Main.storyboard */,
+				3FFA5CD42278AF1900336034 /* Estabelecimento.swift */,
 				3F7475BC2273959D00C92F5C /* PopUpViewController.swift */,
 				3F5659E82272237600A15591 /* infoViewController.swift */,
 				3F82CE522270DD0900074DB5 /* Assets.xcassets */,
@@ -284,6 +287,7 @@
 				3F5659E92272237600A15591 /* infoViewController.swift in Sources */,
 				3F82CE4E2270DD0900074DB5 /* ViewController.swift in Sources */,
 				3F82CE4C2270DD0900074DB5 /* AppDelegate.swift in Sources */,
+				3FFA5CD52278AF1900336034 /* Estabelecimento.swift in Sources */,
 				3F7475BD2273959D00C92F5C /* PopUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
