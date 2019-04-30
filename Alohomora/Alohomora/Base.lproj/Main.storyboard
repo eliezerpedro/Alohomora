@@ -185,12 +185,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QPW-fi-uuO">
-                                <rect key="frame" x="291" y="617" width="68" height="30"/>
+                                <rect key="frame" x="273" y="617" width="86" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Finalizar"/>
+                                <state key="normal" title="Confirmar"/>
                                 <connections>
                                     <action selector="btnReserve:" destination="Bld-oL-NJS" eventType="touchUpInside" id="8pR-tn-nyv"/>
-                                    <action selector="onPostTapped:" destination="vQG-96-Ifb" eventType="touchUpInside" id="3FK-Zu-pdD"/>
+                                    <action selector="buttonConfirmar:" destination="vQG-96-Ifb" eventType="touchUpInside" id="jwk-Tb-7uI"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FIM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhp-f3-fqv">
