@@ -9,8 +9,10 @@
 import UIKit
 
 class ConfirmationViewController: UIViewController {
-    
-    
+    @IBOutlet weak var cpfText: UITextField!
+    @IBOutlet weak var dataText: UITextField!
+    @IBOutlet weak var horaText: UITextField!
+    @IBOutlet weak var cadeadoText: UITextField!
     
     @IBAction func buttonMapa(_ sender: Any) {
         
@@ -20,6 +22,11 @@ class ConfirmationViewController: UIViewController {
     
     
     @IBAction func buttonConfirmar(_ sender: Any) {
+        let cpf = cpfText.text!
+        let data = dataText.text!
+        let hora = horaText.text!
+        let cadeado = cadeadoText.text!
+        
         
         let confirmar = UIAlertController(title: "Confirma", message:"Você tem certeza da escolha?", preferredStyle: UIAlertControllerStyle.alert)
         
@@ -28,7 +35,9 @@ class ConfirmationViewController: UIViewController {
             
             self.performSegue(withIdentifier: "popUp", sender: nil)
             
-            let parameters = ["request":["user_id": "111113", "hour": "12:18", "date":"18/11/2019", "padlock":"04"]]
+            
+            
+            let parameters = ["request":["user_id": cpf, "hour": hora, "date":data, "padlock":cadeado]]
             
             guard let url = URL(string: "https://ufpetardeiotnodemcu.mybluemix.net/app/request/reserve") else { return }
             var request = URLRequest(url: url)
