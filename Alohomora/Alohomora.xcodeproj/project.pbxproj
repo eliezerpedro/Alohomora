@@ -19,6 +19,7 @@
 		3F82CE7B2270E02A00074DB5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F82CE7A2270E02A00074DB5 /* CoreLocation.framework */; };
 		3F82CE7D2270E03000074DB5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F82CE7C2270E03000074DB5 /* MapKit.framework */; };
 		3FFA5CD52278AF1900336034 /* Estabelecimento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFA5CD42278AF1900336034 /* Estabelecimento.swift */; };
+		3FFA5CD72278C70100336034 /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFA5CD62278C70100336034 /* ConfirmationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		3F82CE7A2270E02A00074DB5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3F82CE7C2270E03000074DB5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3FFA5CD42278AF1900336034 /* Estabelecimento.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Estabelecimento.swift; sourceTree = "<group>"; };
+		3FFA5CD62278C70100336034 /* ConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				3F82CE4B2270DD0900074DB5 /* AppDelegate.swift */,
 				3F82CE4D2270DD0900074DB5 /* ViewController.swift */,
 				3F82CE4F2270DD0900074DB5 /* Main.storyboard */,
+				3FFA5CD62278C70100336034 /* ConfirmationViewController.swift */,
 				3FFA5CD42278AF1900336034 /* Estabelecimento.swift */,
 				3F7475BC2273959D00C92F5C /* PopUpViewController.swift */,
 				3F5659E82272237600A15591 /* infoViewController.swift */,
@@ -284,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FFA5CD72278C70100336034 /* ConfirmationViewController.swift in Sources */,
 				3F5659E92272237600A15591 /* infoViewController.swift in Sources */,
 				3F82CE4E2270DD0900074DB5 /* ViewController.swift in Sources */,
 				3F82CE4C2270DD0900074DB5 /* AppDelegate.swift in Sources */,
