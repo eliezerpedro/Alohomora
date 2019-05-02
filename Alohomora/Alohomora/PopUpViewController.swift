@@ -9,11 +9,10 @@
 import UIKit
 
 class PopUpViewController: UIViewController {
-
+    var nome: String?
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
-        
         self.showAnimate()
         // Do any additional setup after loading the view.
     }
