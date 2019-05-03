@@ -32,13 +32,13 @@ void callback(char* topic, byte* payload, unsigned int payloadLength)
   Serial.print("] ");
   if ((char)payload[0] == '0')
   { // Caso receba o caractere 0
-    digitalWrite(BUILTIN_LED, LOW);        // Desliga o LED
+    digitalWrite(13, LOW);        // Desliga o LED
     Serial.println("LOW");
     Serial.println("pegou low");
   }
   if ((char)payload[0] == '1')
   { // Caso receba o caractere 1
-    digitalWrite(BUILTIN_LED, HIGH);        // Liga o LED
+    digitalWrite(13, HIGH);        // Liga o LED
     Serial.println("HIGH");
     Serial.println("pegou HIGh");
   }
